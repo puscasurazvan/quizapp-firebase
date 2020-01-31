@@ -24,6 +24,10 @@ export default class Game extends Component {
     }
   }
 
+  scoreSaved = () => {
+    this.props.history.push('/')
+  }
+
   async componentDidMount() {
     try {
       const questions = await loadQuestions()
@@ -82,7 +86,7 @@ export default class Game extends Component {
                 />
               </div>
           )}
-          {done && <SaveScoreForm score={score} />}
+          {done && <SaveScoreForm score={score} scoreSaved={this.scoreSaved}/>}
           
       </>
     )
