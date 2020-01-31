@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Question from './Question'
+import SaveScoreForm from './SaveScoreForm'
 import HUD from './HUD'
 import { loadQuestions } from '../helpers/QuestionsHelper'
 
@@ -41,6 +42,10 @@ export default class Game extends Component {
 
   changeQuestion = (bonusPoints = 0) => {
     if(this.state.questions.length === 0) {
+      this.setState((prevState) => ({
+        done: true,
+        score: prevState.score + bonusPoints
+      }))
       return this.setState({done: true})
     }
 
@@ -62,21 +67,23 @@ export default class Game extends Component {
   }
 
   render() {
+    const { loading, done, score, currentQuestion, questionNumber } = this.state
     return (
       <>
-        {this.state.loading && !this.state.done && <div id="loader"/>}
-        {!this.state.done
-          && !this.state.loading 
-          && this.state.currentQuestion 
+        {loading && !done && <div id="loader"/>}
+        {!done
+          && !loading 
+          && currentQuestion 
           && (<div>
-                <HUD score={this.state.score} questionNumber={this.state.questionNumber} />
+                <HUD score={score} questionNumber={questionNumber} />
                 <Question
-                question={this.state.currentQuestion}
+                question={currentQuestion}
                 changeQuestion={this.changeQuestion}
                 />
               </div>
           )}
-          {this.state.done && <h1>Done</h1>}
+          {done && <SaveScoreForm score={score} />}
+          
       </>
     )
   }
