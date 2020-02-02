@@ -23,7 +23,7 @@ h4 {
 
 h1 {
   font-size: 5.4rem;
-  color: #56a5eb;
+  color: purple;
   margin-bottom: 5rem;
 }
 
@@ -58,10 +58,10 @@ h2 {
   padding: 1rem 0;
   width: 20rem;
   text-align: center;
-  border: 0.1rem solid #56a5eb;
+  border: 0.1rem solid purple;
   margin-bottom: 1rem;
   text-decoration: none;
-  color: #56a5eb;
+  color: purple;
   background-color: white;
 }
 
@@ -119,7 +119,7 @@ input::placeholder {
 
 .choice-prefix {
   padding: 1.5rem 2.5rem;
-  background-color: #56a5eb;
+  background-color: purple;
   color: white;
 }
 
@@ -155,13 +155,13 @@ input::placeholder {
 #progressBar {
   width: 20rem;
   height: 4rem;
-  border: 0.3rem solid #56a5eb;
+  border: 0.3rem solid purple;
   margin-top: 1.5rem;
 }
 
 #progressBarFull {
   height: 3.4rem;
-  background-color: #56a5eb;
+  background-color: purple;
   width: 0%;
 }
 
@@ -169,7 +169,7 @@ input::placeholder {
 #loader {
   border: 1.6rem solid white;
   border-radius: 50%;
-  border-top: 1.6rem solid #56a5eb;
+  border-top: 1.6rem solid purple;
   width: 12rem;
   height: 12rem;
   animation: spin 2s linear infinite;
