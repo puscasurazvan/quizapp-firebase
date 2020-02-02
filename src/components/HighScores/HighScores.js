@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useFirebase } from './data/FirebaseContext'
+import { useFirebase } from '../data/FirebaseContext'
 import { Link } from 'react-router-dom'
 
 const HighScores = () => {

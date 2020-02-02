@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
-import { useFirebase } from './data/FirebaseContext'
+import { useFirebase } from '../data/FirebaseContext'
 
 export default function SaveScoreForm({score, scoreSaved}) {
   const [username, setUsername] = useState('')

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import Question from './Question';
-import { loadQuestions } from '../helpers/QuestionsHelper';
-import HUD from './HUD';
-import SaveScoreForm from './SaveScoreForm';
+import Question from '../Question';
+import { loadQuestions } from '../../helpers/QuestionsHelper';
+import HUD from '../HUD';
+import SaveScoreForm from '../SaveScoreForm';
 
 export default function Game({ history }) {
   const [questions, setQuestions] = useState([]);
